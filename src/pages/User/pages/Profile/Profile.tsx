@@ -117,7 +117,6 @@ export default function Profile() {
       setValue('date_of_birth', profile.date_of_birth ? new Date(profile.date_of_birth) : new Date(1990, 0, 1))
     }
   }, [profile, setValue])
-  console.log(profile)
   const onSubmit = handleSubmit(async (data) => {
     try {
       let avatarName = avatar

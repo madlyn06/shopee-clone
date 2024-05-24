@@ -116,6 +116,21 @@ export const userSchema = yup.object({
   >
 })
 
+export const productSchema = yup.object({
+  name: yup.string().max(160, 'Độ dài tối đa là 160 ký tự'),
+  description: yup.string().max(160, 'Độ dài tối đa là 20 ký tự'),
+  category: yup.string(),
+  image: yup.string(),
+  images: yup.string(),
+  price: yup.number(),
+  rating: yup.number(),
+  price_before_discount: yup.number(),
+  quantity: yup.number(),
+  sold: yup.number(),
+  view: yup.number()
+})
+
 export type UserSchema = yup.InferType<typeof userSchema>
+export type ProductSchema = yup.InferType<typeof productSchema>
 
 export type Schema = yup.InferType<typeof schema>

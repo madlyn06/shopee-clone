@@ -23,6 +23,7 @@ const Register = lazy(() => import('./pages/Register'))
 const ProductDetail = lazy(() => import('./pages/ProductDetail'))
 const Cart = lazy(() => import('./pages/Cart'))
 const ChangePassword = lazy(() => import('./pages/User/pages/ChangePassword'))
+const AddProduct = lazy(() => import('./pages/User/pages/AddProduct'))
 const HistoryPurchase = lazy(() => import('./pages/User/pages/HistoryPurchase'))
 const NotFound = lazy(() => import('./pages/NotFound'))
 
@@ -135,6 +136,14 @@ export default function useRouteElements() {
                   element: (
                     <Suspense>
                       <HistoryPurchase />
+                    </Suspense>
+                  )
+                },
+                {
+                  path: '/user/add-product',
+                  element: (
+                    <Suspense>
+                      <AddProduct />
                     </Suspense>
                   )
                 }

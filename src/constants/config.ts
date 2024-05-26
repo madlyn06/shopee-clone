@@ -1,5 +1,5 @@
 const config = {
-  baseUrl: 'http://localhost:4000',
+  baseUrl: 'https://api-ecom.duthanhduoc.com/',
   maxSizeUploadAvatar: 1048576 // bytes
 }
 
